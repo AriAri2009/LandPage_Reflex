@@ -10,7 +10,7 @@ class State(rx.State):
    
     
 def navbar_link(text: str, url: str) -> rx.Component:
-    return rx.link(rx.text(text, size="4", weight="medium"), href=url)
+    return rx.link(rx.text(text, color="#2D3A27", size="4", weight="medium"), href=url)
 
 def navbar_buttons() -> rx.Component:
     return rx.box(
@@ -36,12 +36,17 @@ def navbar_buttons() -> rx.Component:
                 rx.hstack(
                     rx.button("Book a Tour", size="3"),
                     bg="#2D3A27",
+                    color="#F2F0E4",
                     spacing="7",
                     justify="end",
+                    border_radius="full",
+                _hover={"bg": "#1A2518"}
                     
                 ),
+                bg="#F2F0E4",
                 width="100%",
                 padding_y="1.5em",
+                padding_x="2em",
                 justify="between",
                 align_items="center"
                 ),
@@ -86,7 +91,8 @@ def hero_section() -> rx.Component:
     return rx.vstack(
         rx.hstack(
             rx.heading(
-                "ARMONIA\nEXCURSIONS", 
+                "ARMONIA\nEXCURSIONS",
+                color="#2D3A27", 
                 size="9", 
                 line_height="1", 
                 font_family="serif"
@@ -114,6 +120,7 @@ def hero_section() -> rx.Component:
             object_fit="cover",
             border_radius="25px",
         ),
+        bg = "#F2F0E4",
         width="100%",
     )
 def about_and_benefits_section() -> rx.Component:
@@ -128,7 +135,7 @@ def about_and_benefits_section() -> rx.Component:
             # Texto Central
             rx.vstack(
                 rx.text("✦ ABOUT US", color="gray", font_size="0.7em", letter_spacing="1px"),
-                rx.heading("The Highest Level of Comfort and Service", size="8", font_family="serif"),
+                rx.heading("The Highest Level of Comfort and Service", color = "#2D3A27", size="8", font_family="serif"),
                 rx.text(
                     "At Armonia Excursions, we combine premium service with attention to detail.",
                     color="#555"
@@ -151,7 +158,7 @@ def about_and_benefits_section() -> rx.Component:
 
         # Espacio entre las fotos y los beneficios
         rx.spacer(height="4em"),
-        rx.text("Why Choose Us?", font_size="1.5em", width="100%", text_align="left"),
+        rx.text("Why Choose Us?", color ="#2D3A27", font_size="1.5em", width="100%", text_align="left"),
         rx.divider(border_color="#ddd"),
 
         # FILA 2: Los beneficios en Grid
@@ -178,8 +185,11 @@ def offer_practice_section() -> rx.Component:
     return rx.vstack(
         # 1. Títulos superiores
         rx.vstack(
-            rx.heading("What we offer?", size="8"),
-            rx.text("From a private tour and a scheduled route to an accessible travel \n \n experience - we’ve got the perfect option for you. ."),
+            rx.heading("What we offer?", color ="#2D3A27", size="8"),
+            rx.text(
+                "From a private tour and a scheduled route to an accessible travel \n \n "
+                "experience - we’ve got the perfect option for you"
+                ),
             align_items="center",
             width="100%",
             margin_bottom="3em",
@@ -232,7 +242,7 @@ def offer_practice_section() -> rx.Component:
             # COLUMNA DERECHA: El texto descriptivo
             rx.vstack(
                 rx.text("✦ AS YOU WISH", color="gray", font_size="0.8em"),
-                rx.heading("Tailored Private Tours", size="7"),
+                rx.heading("Tailored Private Tours", color = "#2D3A27", size="7"),
                 rx.text(
                     "Enjoy a personalized journey in our Mercedes Vito (9-seater: 8 clients + driver) or minibus (14 seater: 13 clients + driver). \n These tours offer complete flexibility — visit as many or as few places as you wish, all at your own pace." 
                 ),
@@ -262,12 +272,21 @@ def index() -> rx.Component:
             hero_section(),
             about_and_benefits_section(),
             offer_practice_section(),
-            spacing="5",
-            justify="center",
-            min_height="85vh",
+            max_width="1350px", # Esto lo hace ancho como la foto
+            padding_x="40px",    # Espacio a los lados para que no toque el borde
+            size="4"
+            
         ),
+        bg = "#F2F0E4",
+        min_height="100vh",
     )
+    
 
 
-app = rx.App()
+app = rx.App(
+    style={
+        "background_color": "#F2F0E4", 
+        "font_family": "Instrument Sans, sans-serif",  
+    }
+)
 app.add_page(index)
