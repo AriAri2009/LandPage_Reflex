@@ -9,13 +9,13 @@ El diseño de la interfaz de usuario está inspirado y fielmente replicado a par
 * **Fuente:** [Pinterest: Armonia Excursions](https://es.pinterest.com/pin/629167010491145002/)
 * **Maqueta de referencia: Página de Armonia Excursions**
 
-!Foto Pinterest](Armonia.jpg) 
+![Foto Pinterest](Armonia.jpg) 
 
 ---
 ## Diseño del landing page realizado por mi:
-Así me quedo mi propio diseño:
+Así me quedo el diseño de mi landing page:
 
-!Foto Propia](Armonia.jpg) 
+![Foto Propia](ArmoniaCopia.JPG) 
 
 ---
 
