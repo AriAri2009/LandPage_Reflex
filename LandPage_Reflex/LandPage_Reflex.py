@@ -19,12 +19,21 @@ def navbar_buttons() -> rx.Component:
                 rx.hstack(
                     rx.image(
                         src="/ArmoniaA.png",
-                        width="3.5em",
+                        width="2.5em",
                         height="auto",
                         
                     ),
+                    rx.box(
+                        rx.text("English ∨", color="#2D3A27", size="2", weight="medium"),
+                        border="1px solid #E8E4D3",
+                        padding_x="12px",
+                        padding_y="4px",
+                        border_radius="full",
+                        margin_left="10px",
+                    ),
                     align_items="center",
                 ),
+                
                 rx.hstack(
                     navbar_link("Home", "/#"),
                     navbar_link("About us", "/#"),
@@ -34,19 +43,26 @@ def navbar_buttons() -> rx.Component:
                     spacing="5",
                 ),
                 rx.hstack(
-                    rx.button("Book a Tour", size="3"),
-                    bg="#2D3A27",
-                    color="#F2F0E4",
-                    spacing="7",
-                    justify="end",
-                    border_radius="full",
-                _hover={"bg": "#1A2518"}
-                    
+                    rx.button(
+                        "Book a Tour",
+                        size="2",
+                        bg="#2D3A27",
+                        color="#F2F0E4",
+                        border_radius="md",
+                        padding_x="16px",
+                        padding_y="8px",
+                        font_size="0.85em",
+                        _hover={"bg": "#1A2518"}
                 ),
+                justify="end",
+            ),
+                    
                 bg="#F2F0E4",
                 width="100%",
-                padding_y="1.5em",
-                padding_x="2em",
+                max_width="1280px",  
+                margin="0 auto",
+                padding_y="0.8em",
+                padding_x="24px",
                 justify="between",
                 align_items="center"
                 ),
@@ -75,16 +91,15 @@ def navbar_buttons() -> rx.Component:
                     ),
                     justify="end",
                 ),
+                padding_y="0.8em",
+                padding_x="20px",
                 justify="between",
                 align_items="center",
             ),
         ),
-        bg=rx.color("accent", 3),
-        padding="1em",
-        # position="fixed",
-        # top="0px",
-        # z_index="5",
+        bg="#F2F0E4",  # Cambiado por tu color crema unificado
         width="100%",
+        border_bottom="1px solid #EAE8DC",
     )
     
 def hero_section() -> rx.Component:
@@ -268,18 +283,25 @@ def index() -> rx.Component:
     # Welcome Page (Index)
     return rx.container(
         navbar_buttons(),
-        rx.vstack(
+        rx.center(
+           rx.vstack(
             hero_section(),
             about_and_benefits_section(),
             offer_practice_section(),
-            max_width="1350px", # Esto lo hace ancho como la foto
+            width="100%",
+            max_width="1280px", # Esto lo hace ancho como la foto
             padding_x="40px",    # Espacio a los lados para que no toque el borde
-            size="4"
-            
+            size="9"  
         ),
+        width="100%",
+        ),
+        
         bg = "#F2F0E4",
         min_height="100vh",
-    )
+        width="100%",
+    )  
+        
+       
     
 
 
