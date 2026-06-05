@@ -1,20 +1,25 @@
 # LandPage_Reflex
-Aquí esta el landing page que realice basado en el de la imagen de pinterest que utilice como referencia.
+### Aquí esta el landing page que realice basado en el de la imagen de pinterest que utilice como referencia.
 ---
 
-## 📸 Diseño de Referencia
+## Diseño de Referencia
 
 El diseño de la interfaz de usuario está inspirado y fielmente replicado a partir de la siguiente maqueta de diseño UI/UX:
 
-* **Fuente:** [Inspiración en Pinterest](https://es.pinterest.com/pin/629167010491145002/)
-* **Maqueta de referencia:Página de Armonia Excursions**
+* **Fuente:** [Pinterest: Armonia Excursions](https://es.pinterest.com/pin/629167010491145002/)
+* **Maqueta de referencia: Página de Armonia Excursions**
 
-![Referencia Visual](./image_7b6f80.jpg) 
-*(Nota: Asegúrate de que el nombre del archivo de la imagen coincida con el que guardes en la carpeta de tu proyecto, o usa la URL directa de la imagen).*
+!Foto Pinterest](Armonia.jpg) 
+
+---
+## Diseño del landing page realizado por mi:
+Así me quedo mi propio diseño:
+
+!Foto Propia](Armonia.jpg) 
 
 ---
 
-## 🚀 ¿Qué características tiene el proyecto?
+## ¿Qué características tiene el proyecto?
 
 La página web cuenta con una estructura limpia, espaciada y elegante que incluye:
 * **Navbar Estilizado:** Una barra de navegación superior minimalista y unificada con el fondo crema de la página, adaptada para escritorio y dispositivos móviles (menú hamburguesa).
@@ -25,7 +30,7 @@ La página web cuenta con una estructura limpia, espaciada y elegante que incluy
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 * **Python:** Lenguaje base para el desarrollo.
 * **Reflex Framework:** Framework de Python utilizado para compilar el Frontend (HTML/CSS/Next.js) y manejar el Backend en un solo entorno de código.
@@ -34,7 +39,7 @@ La página web cuenta con una estructura limpia, espaciada y elegante que incluy
 
 ---
 
-## 💻 ¿Cómo abrir y correr el proyecto?
+## ¿Cómo abrir y correr el proyecto?
 
 Sigue estos pasos en tu terminal para clonar el repositorio y ejecutar la aplicación de forma local en tu computadora:
 
@@ -57,6 +62,5 @@ Para levantar el servidor de desarrollo, compilar el frontend y abrir la página
 Bash
 poetry run reflex run
 Una vez que termine la compilación inicial, la terminal te indicará que la web está lista. Abre tu navegador e ingresa a:
-👉 http://localhost:3000 (Frontend de la aplicación)
+http://localhost:3000 (Frontend de la aplicación)
 
-Desarrollado con 💻 y Python.
